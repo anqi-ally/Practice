@@ -1,0 +1,20 @@
+# Basic project information
+[project]
+name = "hello-world-sample-project"名字
+version = "2024.0.0"时间
+
+# Most students will use setuptools, though poetry is also an option
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+# Setuptools configuration see https://setuptools.pypa.io/en/latest/
+userguide/pyproject_config.html
+#setuptools-specificconfiguration
+
+
+[tool.setuptools.packages.find]告诉别人你的源代码在哪
+where = ["src"]    # list of folders that contain the packages (["."] by default)
+include = ["my_package你src下包的名字--datapipeline*"]    # package names should match these glob patterns (["*"] by default)
+exclude = ["my_package.tests*"]包的子目录，你没有这个就先空着     # exclude packages matching these glob patterns (empty by default)
+
